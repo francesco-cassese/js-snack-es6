@@ -2,7 +2,7 @@
 
 const validaListaBiciclette = listaBiciclette => {
 
-    if (listaBiciclette === null) {             // Controllo se l'argomento passato esiste (non è nullo)
+    if (!listaBiciclette) {                     // Controllo se l'argomento passato esiste (non è nullo o undefined)
         return -1                               // Se la lista non è stata definita, restituisco il codice di errore -1
     }
 
