@@ -63,3 +63,9 @@ if (risultatoValidazione === -1) {                                      //Se mi 
 } else {
     console.log('Dati validati');                                       //Se restituisce la lista completa, i dati sono validati
 }
+
+const risultatoBiciLeggera = controlloPesoMinore(catalogoBiciclette);   // Richiamo la funzione e stampo tutto
+
+console.log(`La bicicletta più leggera è:                                   
+     NOME: ${risultatoBiciLeggera.nome} 
+     PESO: ${risultatoBiciLeggera.peso},`);
