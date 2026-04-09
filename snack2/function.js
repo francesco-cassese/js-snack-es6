@@ -28,3 +28,21 @@ const validaListaSquadre = lista => {
 
     return lista;         // Se il ciclo termina senza aver trovato errori, la lista è considerata valida restituisco l'intera lista di biciclette
 }
+
+//===================================================
+// FUNZIONE GENERA DATI SQUADRE
+//===================================================
+
+const popolaDatiSquadre = lista => {
+
+    for (let i = 0; i < lista.length; i++) {
+
+        let elemCorrente = lista[i];
+
+        elemCorrente.falliSubiti = Math.floor(Math.random() * 20) + 1;
+
+        elemCorrente.puntiFatti = Math.floor(Math.random() * 20) + 1;
+    }
+    return lista;
+}
+
