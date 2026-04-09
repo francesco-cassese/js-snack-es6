@@ -49,3 +49,17 @@ const catalogoBiciclette = [
         peso: 6.7
     }
 ];
+
+// --- VALIDAZIONE DATI LISTA ---
+
+const risultatoValidazione = validaListaBiciclette(catalogoBiciclette);
+
+if (risultatoValidazione === -1) {
+    console.error('Il catalogo non esiste');
+} else if (risultatoValidazione === 0) {
+    console.error('Il catalogo è vuoto');
+} else if (risultatoValidazione === 1) {
+    console.error('Dati non validi');
+} else {
+    console.log('Dati validati');
+}
