@@ -48,3 +48,17 @@ const squadreDiCalcio = [
         falliSubiti: 0
     }
 ];
+
+// --- VALIDAZIONE ---
+
+const risultatoValidazione = validaListaBiciclette(catalogoBiciclette); //Richiamo la funzione per la validazione
+
+if (risultatoValidazione === -1) {                                      //Se mi restituisce -1 la lista non esiste
+    console.error('La lista non esiste');
+} else if (risultatoValidazione === 0) {                                //Se mi restituisce 0 la lista è vuoto
+    console.error('La lista è vuota');
+} else if (risultatoValidazione === 1) {                                //Se mi restituisce 1 i dati sono errati
+    console.error('Dati non validi');
+} else {
+    console.log('Dati validati');                                       //Se restituisce la lista completa, i dati sono validati
+}
