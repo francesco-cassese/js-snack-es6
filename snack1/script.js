@@ -52,14 +52,14 @@ const catalogoBiciclette = [
 
 // --- VALIDAZIONE DATI LISTA ---
 
-const risultatoValidazione = validaListaBiciclette(catalogoBiciclette);
+const risultatoValidazione = validaListaBiciclette(catalogoBiciclette); //Richiamo la funzione per la validazione
 
-if (risultatoValidazione === -1) {
+if (risultatoValidazione === -1) {                                      //Se mi restituisce -1 il catalogo non esiste
     console.error('Il catalogo non esiste');
-} else if (risultatoValidazione === 0) {
+} else if (risultatoValidazione === 0) {                                //Se mi restituisce 0 il catalogo è vuoto
     console.error('Il catalogo è vuoto');
-} else if (risultatoValidazione === 1) {
+} else if (risultatoValidazione === 1) {                                //Se mi restituisce 1 i dati sono errati
     console.error('Dati non validi');
 } else {
-    console.log('Dati validati');
+    console.log('Dati validati');                                       //Se restituisce la lista completa, i dati sono validati
 }
