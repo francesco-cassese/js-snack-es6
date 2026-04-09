@@ -1,5 +1,9 @@
 'use strict';
 
+//===================================================
+// VALIDAZIONE LISTA BICICLETTE
+//===================================================
+
 const validaListaBiciclette = listaBiciclette => {
 
     if (!listaBiciclette) {                     // Controllo se l'argomento passato esiste (non è nullo o undefined)
@@ -23,7 +27,9 @@ const validaListaBiciclette = listaBiciclette => {
     return listaBiciclette;                     // Se il ciclo termina senza aver trovato errori, la lista è considerata valida restituisco l'intera lista di biciclette
 }
 
-// --- Funzione del controllo peso ---
+//===================================================
+// CONTROLLO PESO MINORE
+//===================================================
 
 const controlloPesoMinore = listaBiciclette => {
 
