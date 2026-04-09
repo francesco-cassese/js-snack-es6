@@ -1,6 +1,6 @@
 'use strict';
 
-function validaListaBiciclette(listaBiciclette) {
+const validaListaBiciclette = listaBiciclette => {
 
     if (listaBiciclette === null) {
         return -1
