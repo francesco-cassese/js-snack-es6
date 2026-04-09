@@ -46,3 +46,23 @@ const popolaDatiSquadre = lista => {
     return lista;
 }
 
+//===================================================
+// FUNZIONE ESTRAI DATI
+//===================================================
+
+const estraiFalliSubiti = lista => {
+
+    let risulato = [];
+
+    for (let i = 0; i < lista.length; i++) {
+
+        const elemEstratto = {
+            nome: lista[i].nome,
+            falliSubiti: lista[i].falliSubiti
+        };
+
+        risulato.push(elemEstratto);
+    }
+    return risulato;
+}
+
