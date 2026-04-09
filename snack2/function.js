@@ -35,15 +35,15 @@ const validaListaSquadre = lista => {
 
 const popolaDatiSquadre = lista => {
 
-    for (let i = 0; i < lista.length; i++) {
+    for (let i = 0; i < lista.length; i++) {                               // Avvio un ciclo for per scorrere ogni squadra presente nella lista
 
-        let elemCorrente = lista[i];
+        let elemCorrente = lista[i];                                       // Salvo l'elemento corrente in una variabile per modificarne le proprietà
 
-        elemCorrente.falliSubiti = Math.floor(Math.random() * 20) + 1;
+        elemCorrente.falliSubiti = Math.floor(Math.random() * 20) + 1;     // Genero un numero casuale tra 1 e 20 e lo assegno ai falli subiti
 
-        elemCorrente.puntiFatti = Math.floor(Math.random() * 20) + 1;
+        elemCorrente.puntiFatti = Math.floor(Math.random() * 20) + 1;      // Genero un numero casuale tra 1 e 20 e lo assegno ai punti fatti
     }
-    return lista;
+    return lista;                                                          // Restituisco la lista aggiornata con i valori casuali inseriti
 }
 
 //===================================================
