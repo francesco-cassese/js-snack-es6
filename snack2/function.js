@@ -52,17 +52,17 @@ const popolaDatiSquadre = lista => {
 
 const estraiFalliSubiti = lista => {
 
-    let risulato = [];
+    let risulato = [];                                                     // Inizializzo un array vuoto che conterrà i nuovi oggetti estratti
 
-    for (let i = 0; i < lista.length; i++) {
+    for (let i = 0; i < lista.length; i++) {                               // Avvio un ciclo for per scorrere tutti gli elementi della lista originale
 
-        const elemEstratto = {
-            nome: lista[i].nome,
-            falliSubiti: lista[i].falliSubiti
+        const elemEstratto = {                                             // Creo un nuovo oggetto selezionando solo le proprietà necessarie
+            nome: lista[i].nome,                                           // Copio il nome della squadra dall'elemento originale
+            falliSubiti: lista[i].falliSubiti                              // Copio il valore dei falli subiti dall'elemento originale
         };
 
-        risulato.push(elemEstratto);
+        risulato.push(elemEstratto);                                       // Aggiungo il nuovo oggetto appena creato nell'array dei risultati
     }
-    return risulato;
+    return risulato;                                                       // Restituisco l'array finale contenente solo i nomi e i falli subiti
 }
 
