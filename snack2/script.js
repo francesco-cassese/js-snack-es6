@@ -51,7 +51,7 @@ const squadreDiCalcio = [
 
 // --- VALIDAZIONE ---
 
-const risultatoValidazione = validaListaBiciclette(catalogoBiciclette); //Richiamo la funzione per la validazione
+const risultatoValidazione = validaListaSquadre(squadreDiCalcio); //Richiamo la funzione per la validazione
 
 if (risultatoValidazione === -1) {                                      //Se mi restituisce -1 la lista non esiste
     console.error('La lista non esiste');
@@ -62,3 +62,9 @@ if (risultatoValidazione === -1) {                                      //Se mi 
 } else {
     console.log('Dati validati');                                       //Se restituisce la lista completa, i dati sono validati
 }
+
+const listaPopolata = popolaDatiSquadre(squadreDiCalcio);               //Richiamo la funzione per modificare gli oggetti
+
+const listaFalliSubiti = estraiFalliSubiti(listaPopolata);              //Estraggo gli oggetti da quella lista solo con nome e falli subiti
+
+console.log(listaFalliSubiti);                                          //Stampo la lista solo con il nome e i falli
