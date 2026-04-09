@@ -1,7 +1,7 @@
 'use strict';
 
 //===================================================
-// VALIDAZIONE LISTA BICICLETTE
+// VALIDAZIONE LISTA SQUADRE
 //===================================================
 
 const validaListaSquadre = lista => {
