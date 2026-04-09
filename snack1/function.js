@@ -14,8 +14,10 @@ const validaListaBiciclette = listaBiciclette => {
 
         const biciCorrente = listaBiciclette[i]         // Salvo l'elemento corrente in una costante per rendere il codice più leggibile
 
-        if (biciCorrente.nome.trim() === '' || biciCorrente.peso <= 0) {    // Eseguo la validazione delle proprietà dell'oggetto corrente
-            return 1                                                        // Se anche una sola bicicletta non è valida, restituisco il codice di errore 1
+        const pesoConvertito = Number(biciCorrente.peso);   // Converto il peso in numero
+
+        if (biciCorrente.nome.trim() === '' || isNaN(pesoConvertito) || pesoConvertito <= 0) {      // Eseguo la validazione delle proprietà dell'oggetto corrente
+            return 1                                                                                // Se anche una sola bicicletta non è valida, restituisco il codice di errore 1
         }
     }
     return listaBiciclette;                     // Se il ciclo termina senza aver trovato errori, la lista è considerata valida restituisco l'intera lista di biciclette
