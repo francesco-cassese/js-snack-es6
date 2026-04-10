@@ -47,7 +47,7 @@ const controlloPesoMinore = listaBiciclette => {
 }
 
 //===================================================
-// 2. ESTRAI TUTTE LE BICI CON LO STESSO PESO (PAREGGIO)
+// ESTRAI TUTTE LE BICI CON LO STESSO PESO
 //===================================================
 
 const estraiTutteLeLeggere = (listaBiciclette, biciDiRiferimento) => {

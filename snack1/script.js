@@ -61,11 +61,24 @@ if (risultatoValidazione === -1) {                                      //Se mi 
 } else if (risultatoValidazione === 1) {                                //Se mi restituisce 1 i dati sono errati
     console.error('Dati non validi');
 } else {
-    console.log('Dati validati');                                       //Se restituisce la lista completa, i dati sono validati
+
+    console.log('Dati validati');
+
+    // Trovo la prima bici leggera
+    const risultatoBiciLeggera = controlloPesoMinore(risultatoValidazione);
+
+    // Passo la lista e la bici trovata per estrarre tutti i pareggi
+    const piuBiciLeggere = estraiTutteLeLeggere(risultatoValidazione, risultatoBiciLeggera);
+
+    //  Stampo il peso record una volta sola
+    console.log(`Il peso minore trovato è di ${risultatoBiciLeggera.peso}kg.`);
+
+    //  Ciclo l'array per stampare tutte le bici che hanno quel peso
+    for (let i = 0; i < piuBiciLeggere.length; i++) {
+        const biciCorrente = piuBiciLeggere[i];
+
+        console.log(`La bicicletta più leggera è:                                   
+             NOME: ${biciCorrente.nome} 
+             PESO: ${biciCorrente.peso}kg`);
+    }
 }
-
-const risultatoBiciLeggera = controlloPesoMinore(catalogoBiciclette);   // Richiamo la funzione e stampo tutto
-
-console.log(`La bicicletta più leggera è:                                   
-     NOME: ${risultatoBiciLeggera.nome} 
-     PESO: ${risultatoBiciLeggera.peso},`);
