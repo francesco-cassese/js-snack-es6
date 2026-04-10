@@ -45,3 +45,22 @@ const controlloPesoMinore = listaBiciclette => {
     }
     return biciLeggera;                                    //Alla fine di tutto mi faccio restituire la bici più leggera
 }
+
+//===================================================
+// 2. ESTRAI TUTTE LE BICI CON LO STESSO PESO (PAREGGIO)
+//===================================================
+
+const estraiTutteLeLeggere = (listaBiciclette, biciDiRiferimento) => {
+
+    const elencoVincitrici = [];                           // Creo un array vuoto per contenere tutte le eventuali bici a pari merito
+    const pesoDaBattere = biciDiRiferimento.peso;          // Estraggo il peso dall'oggetto che abbiamo trovato nella prima funzione
+
+    for (let i = 0; i < listaBiciclette.length; i++) {     // Ciclo tutta la lista originale per cercare i doppioni
+
+        if (listaBiciclette[i].peso === pesoDaBattere) {   // Se il peso della bici in questa posizione è uguale al peso record
+            elencoVincitrici.push(listaBiciclette[i]);     // Aggiungo l'oggetto all'elenco delle vincitrici
+        }
+    }
+
+    return elencoVincitrici;                               // Restituisco l'array con tutte le bici più leggere
+}
