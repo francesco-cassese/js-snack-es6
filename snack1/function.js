@@ -39,7 +39,7 @@ const controlloPesoMinore = listaBiciclette => {
 
         const biciCorrente = listaBiciclette[i];           //Salvo l'elemento corrente in una costante per rendere il codice più leggibile
 
-        if (biciLeggera > biciCorrente.peso) {             //Se ad ogni giro la bici considerata leggera ne trova una con un peso minore 
+        if (biciLeggera.peso > biciCorrente.peso) {             //Se ad ogni giro la bici considerata leggera ne trova una con un peso minore 
             biciLeggera = biciCorrente;                    //Allora quella diventa la biciLeggera
         }
     }
